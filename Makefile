@@ -6,7 +6,7 @@ testbench.vcd: testbench_ez.vvp
 	vvp -N $< +vcd >/dev/null
 
 testbench_ez.vvp: testbench.sv nerv.sv
-	iverilog -o $@ -DCOMPRESSED_ISA $^
+	iverilog -g2012 -o $@ -DCOMPRESSED_ISA $^
 	chmod -x $@
 
 clean:
