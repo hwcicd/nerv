@@ -1,8 +1,11 @@
 name: Myrtha 
   
-on: 
+on:   
   push:
-  workflow_dispatch:
+    branches:
+      - 'main'
+  schedule:
+    - cron: "0 0 * * 0"
 
 jobs:
   generate-spec:
